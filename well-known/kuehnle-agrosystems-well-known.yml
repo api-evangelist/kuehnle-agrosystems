@@ -1,0 +1,82 @@
+generated: '2026-08-23'
+method: probed
+source: live HTTP probes of www.kuehnleagro.com, kuehnleagro.com (apex, 301s to www) and the
+  api./docs./developer. hostnames
+note: >-
+  No /.well-known document is served by any Kuehnle AgroSystems host, so NO WellKnown and NO
+  SecurityTxt pointer is wired — this file records an absence, not a presence. kuehnleagro.com
+  is a Squarespace site and answers honestly: every /.well-known/* path returns a real HTTP 404
+  carrying the site's 107,684-byte 404 page, which is byte-identical to the control probe
+  /definitely-not-a-real-path-zzz9, so these are true negatives rather than an SPA catch-all.
+  The one exception is /.well-known/security.txt, which Squarespace answers with its own
+  36-byte JSON 404 body ({"message":"security.txt not found"}). api., docs., developer., dev.,
+  app., mcp., portal., data. and status..kuehnleagro.com are wildcard DNS to a single
+  Squarespace address (76.223.27.102) whose TLS certificate does not cover them, so the
+  handshake fails (curl exit 60, recorded as status 0) — they are parking, not hosts.
+hit_count: 0
+soft_404_control:
+  url: https://www.kuehnleagro.com/definitely-not-a-real-path-zzz9
+  status: 404
+  bytes: 107684
+hosts:
+- host: https://www.kuehnleagro.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/json
+    note: Squarespace 36-byte JSON not-found body, not a document
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/agent-card.json
+    status: 404
+    content_type: text/html
+  - path: /.well-known/agent.json
+    status: 404
+    content_type: text/html
+- host: https://kuehnleagro.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    content_type: application/json
+  - path: /.well-known/openid-configuration
+    status: 404
+    content_type: text/html
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    content_type: text/html
+  - path: /.well-known/api-catalog
+    status: 404
+    content_type: text/html
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    content_type: text/html
+- host: https://api.kuehnleagro.com
+  documents:
+  - path: /
+    status: 0
+    note: TLS handshake fails — wildcard DNS to Squarespace, certificate does not cover the name
+- host: https://docs.kuehnleagro.com
+  documents:
+  - path: /
+    status: 0
+    note: TLS handshake fails — wildcard DNS to Squarespace, certificate does not cover the name
+- host: https://developer.kuehnleagro.com
+  documents:
+  - path: /
+    status: 0
+    note: TLS handshake fails — wildcard DNS to Squarespace, certificate does not cover the name
+x-evidence:
+  fetched: '2026-08-23'
+  robots: https://www.kuehnleagro.com/robots.txt (200, Squarespace default; blocks a long list
+    of AI crawlers including ClaudeBot, GPTBot and Google-Extended)
+  sitemap: https://www.kuehnleagro.com/sitemap.xml (200, six URLs, no developer or docs pages)

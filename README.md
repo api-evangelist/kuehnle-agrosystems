@@ -64,5 +64,17 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Kuehnle Agrosystems is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+Kuehnle AgroSystems, Inc. (KAS) is a Honolulu, Hawaii microalgae biotechnology company founded in
+2007 by Dr. Adelheid "Heidi" Kuehnle, with a second site in Cork, Ireland. KAS produces high-value
+natural products from microalgae — principally natural astaxanthin and algal protein — using a
+patented heterotrophic "dark fermentation" process and proprietary non-GMO Hawaiian algal strains
+that run in standard fermentation equipment rather than open ponds or photobioreactors. Markets
+served are nutraceuticals, cosmetics and skincare, functional foods and beverages, and aquaculture
+and animal feed. In August 2025 KAS entered a development and commercialization partnership with
+Corbion for an esterified natural astaxanthin.
+
+**No API surface.** KAS sells ingredients, strains and fermentation process technology, not
+software. As of 2026-08-23 it publishes no API, developer portal, SDK, or machine-readable
+contract; see `x-coverage` in [apis.yml](apis.yml) for the probe evidence.
+
+- https://www.kuehnleagro.com/

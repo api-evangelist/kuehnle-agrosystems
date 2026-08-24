@@ -1,17 +1,39 @@
 aid: kuehnle-agrosystems
-name: Kuehnle Agrosystems
-description: 'Kuehnle Agrosystems is a company surfaced via the API Evangelist harvest backlog (source:
-  secondary-market) and added to the network as a stub for full-pipeline profiling.'
+name: Kuehnle AgroSystems
+description: 'Kuehnle AgroSystems, Inc. (KAS) is a Honolulu, Hawaii microalgae biotechnology
+  company founded in 2007 by Dr. Adelheid "Heidi" Kuehnle, with a second site in Cork, Ireland.
+  KAS produces high-value natural products from microalgae for the food, feed and health
+  markets using a patented heterotrophic "dark fermentation" process and proprietary non-GMO
+  Hawaiian algal strains that run in standard fermentation equipment rather than open ponds or
+  photobioreactors, compressing production from weeks to days with substantially lower cost,
+  land, water and energy use. Its lead products are natural astaxanthin and algal protein,
+  sold into nutraceuticals, cosmetics and skincare, functional foods and beverages, and
+  aquaculture and animal feed; in August 2025 KAS entered a development and commercialization
+  partnership with Corbion for an esterified natural astaxanthin. KAS sells ingredients,
+  strains and fermentation process technology rather than software: it publishes no API,
+  developer program, SDK, or machine-readable contract, and kuehnleagro.com is a six-page
+  Squarespace marketing site.'
+image: https://static1.squarespace.com/static/641fd5cedcca7622021a7b58/t/6622e938ae3f8f1f752d2240/1713563960811/KAS%2Blogo_white_gray-3.png?format=1500w
 url: https://raw.githubusercontent.com/api-evangelist/kuehnle-agrosystems/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
-specificationVersion: '0.20'
+x-tier: profile
+x-tier-reason: no-api-surface
+specificationVersion: '0.23'
 created: '2026-08-23'
 modified: '2026-08-23'
 tags:
 - Company
+- Biotechnology
+- Microalgae
+- Fermentation
+- Astaxanthin
+- Ingredients
+- Food and Beverage
+- Aquaculture
+- Nutraceuticals
+- AgTech
+- Hawaii
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +41,68 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/kuehnle-agrosystems-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://www.kuehnleagro.com/
+- type: Technology
+  url: https://www.kuehnleagro.com/technology
+- type: Product
+  url: https://www.kuehnleagro.com/astaxanthin
+  description: Natural astaxanthin product page.
+- type: Product
+  url: https://www.kuehnleagro.com/protein
+  description: Algal protein product page.
+- type: Process
+  url: https://www.kuehnleagro.com/dark-fermentation
+  description: The patented heterotrophic dark-fermentation process.
+- type: Contact
+  url: https://www.kuehnleagro.com/contact
+- type: Support
+  url: https://www.kuehnleagro.com/contact
+  description: The company's only published inbound channel is the contact form; there is
+    no developer support surface.
+- type: LinkedIn
+  url: https://www.linkedin.com/company/kuehnle-agrosystems-inc.
+- type: Partners
+  url: https://www.corbion.com/media/press-release/3135449?language=English
+  description: Corbion / KAS partnership to develop and commercialize natural astaxanthin
+    from algae fermentation, announced 2025-08-19.
+- type: LLMsTxt
+  url: llms/kuehnle-agrosystems-llms.txt
+
+x-enrichment:
+  date: '2026-08-23'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Kuehnle AgroSystems sells microalgae-derived ingredients — natural astaxanthin and algal
+    protein produced by a patented dark-fermentation process — so software is not the product;
+    kuehnleagro.com is a six-page Squarespace marketing site whose sitemap lists six URLs and
+    no developer, docs or API page, there is no GitHub organization or npm/PyPI package under
+    the company name, and api./docs./developer..kuehnleagro.com are wildcard DNS to a
+    Squarespace address whose TLS certificate does not cover them, so no HTTPS connection to
+    them is possible.
+  evidence:
+  - url: https://www.kuehnleagro.com/openapi.json
+    status: 404
+  - url: https://www.kuehnleagro.com/api-docs
+    status: 404
+  - url: https://www.kuehnleagro.com/developers
+    status: 404
+  - url: https://www.kuehnleagro.com/llms.txt
+    status: 404
+  - url: https://www.kuehnleagro.com/.well-known/agent-card.json
+    status: 404
+  - url: https://www.kuehnleagro.com/.well-known/security.txt
+    status: 404
+  - url: https://api.kuehnleagro.com/
+    status: 0
+  - url: https://api.github.com/orgs/kuehnleagro
+    status: 404
+  checked: '2026-08-23'
