@@ -13,6 +13,17 @@ description: 'Kuehnle AgroSystems, Inc. (KAS) is a Honolulu, Hawaii microalgae b
   strains and fermentation process technology rather than software: it publishes no API,
   developer program, SDK, or machine-readable contract, and kuehnleagro.com is a six-page
   Squarespace marketing site.'
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 image: https://static1.squarespace.com/static/641fd5cedcca7622021a7b58/t/6622e938ae3f8f1f752d2240/1713563960811/KAS%2Blogo_white_gray-3.png?format=1500w
 url: https://raw.githubusercontent.com/api-evangelist/kuehnle-agrosystems/refs/heads/main/apis.yml
 x-type: company
