@@ -24,6 +24,18 @@ deliveryModel:
   - none
   generated: '2026-08-28'
   method: derived
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source:
+  - security
+  generated: '2026-09-02'
+  method: derived
 image: https://static1.squarespace.com/static/641fd5cedcca7622021a7b58/t/6622e938ae3f8f1f752d2240/1713563960811/KAS%2Blogo_white_gray-3.png?format=1500w
 url: https://raw.githubusercontent.com/api-evangelist/kuehnle-agrosystems/refs/heads/main/apis.yml
 x-type: company
